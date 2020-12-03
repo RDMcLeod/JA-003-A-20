@@ -3,15 +3,17 @@ import java.util.Scanner;
 public class javaprojhoj {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+		System.out.println("derrick");
 				
-		//Scanner in = new Scanner(System.in);
-		//String s = in.nextLine();
-		int x;
-		x = 5;
-		double d = 5.5;
+		Scanner in = new Scanner(System.in);
+		String s = in.nextLine();
 		
-		System.out.println(d);
+		if(s.equals("derrick")) {
+		   System.out.println("Hey derrick");
+		} else
+			
+		in.close();
+			
 	}
 
 }
