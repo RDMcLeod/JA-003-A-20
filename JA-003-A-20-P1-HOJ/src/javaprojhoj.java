@@ -6,16 +6,16 @@ public class javaprojhoj {
 		System.out.println("enter your name");
 				
 		Scanner in = new Scanner(System.in);
-		String s = in.nextLine();
+		//String s = in.nextLine();
 		
-		if(s.equals("derrick")) {
-		   System.out.println("Hey derrick");
-		} else if(s.equals("Louis")) {
-			System.out.println("Hey Louis");
-		} else {
-			System.out.println("your not welcome here");
-				
+		
+		int i = 0;// initialization
+		while(i < 10)  {//condition
+			System.out.println("i is: "+ i );
+			i++; //update
 		}
+		
+					
 			
 		in.close();
 			
