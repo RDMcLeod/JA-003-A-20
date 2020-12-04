@@ -10,16 +10,22 @@ public class javaprojhoj {
 		
 		
 		int i = 0;// initialization
-		while(i < 10)  {//condition
+		
+		do {
 			System.out.println("i is: "+ i );
-			i++; //update
+			i++;
+		} while (i < 10);  
+				
+		in.close();
+		
 		}
+		
 		
 					
 			
-		in.close();
+		
 			
-	}
+	
 
 }
 
