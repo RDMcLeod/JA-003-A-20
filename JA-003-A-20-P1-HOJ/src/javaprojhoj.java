@@ -5,19 +5,26 @@ public class javaprojhoj {
 	public static void main(String[] args) {
 		System.out.println("enter your name");
 				
-		Scanner in = new Scanner(System.in);
-		//String s = in.nextLine();
-		
-		
-		int i = 0;// initialization
-		
-		do {
-			System.out.println("i is: "+ i );
-			i++;
-		} while (i < 10);  
+				Scanner in = new Scanner(System.in);
+				int size = in.nextInt();
 				
-		in.close();
-		
+				
+				int [] grades = new int [size];
+				
+				System.out.println("Enter" + size + "numbers. Press enter after each");
+				
+				for (int i = 0; i < size; i++) {
+					grades[i]=in.nextInt();
+				}
+				
+				in.close();
+				
+				for (int i = 0; i < size; i++) {
+					System.out.println(grades[i]);
+				}
+				
+					
+				
 		}
 		
 		
