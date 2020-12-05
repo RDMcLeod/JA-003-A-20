@@ -6,16 +6,16 @@ public class javaprojhoj {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-				Scanner in = new Scanner(new File("Untitled3.txt"));
+		Scanner in = new Scanner(new File("Untitled 4.txt"));
 				
-				if(in.hasNextLine()) {
-					System.out.println(in.nextLine());
+		while(in.hasNextLine()) {
+			System.out.println(in.nextLine());
 					
 				}
-				in.close();
 				
-				
-				}
+		in.close();
+							
+			}
 						
 		}
 		
