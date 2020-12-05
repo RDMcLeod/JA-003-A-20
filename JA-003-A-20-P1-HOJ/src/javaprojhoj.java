@@ -1,30 +1,22 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class javaprojhoj {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
-				Scanner in = new Scanner(System.in);
-				System.out.println("Give us a size");
-				int size = in.nextInt();
+				Scanner in = new Scanner(new File("Untitled3.txt"));
 				
-				
-				int [] grades = new int [size];
-				
-				System.out.println("Enter" + size + "numbers. Press enter after each");
-				
-				for (int i = 0; i < size; i++) {
-					grades[i]=in.nextInt();
+				if(in.hasNextLine()) {
+					System.out.println(in.nextLine());
+					
 				}
-				
 				in.close();
 				
-				for (int i = 0; i < size; i++) {
-					System.out.println(grades[i]);
+				
 				}
-				
-					
-				
+						
 		}
 		
 		
@@ -34,5 +26,5 @@ public class javaprojhoj {
 			
 	
 
-}
+
 
