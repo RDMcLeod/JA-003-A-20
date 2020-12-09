@@ -5,22 +5,25 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.print.DocFlavor.STRING;
-
 public class javaprojhoj {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args)  {
+				
+		
 		LinkedList<String> names = new LinkedList<String>();
 		names.push("russ");
 		names.push("Jane");
 		names.push("steve");
 		
 		System.out.println(names.pop());
-		System.out.println(names.remove());
+		System.out.println(names.removeFirst());
 		System.out.println(names.remove());
 	}
+
+	
+	}
 						
-}
+
 		
 		
 					
