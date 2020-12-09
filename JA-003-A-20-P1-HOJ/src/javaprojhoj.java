@@ -11,11 +11,11 @@ public class javaprojhoj {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		LinkedList<String> names = new LinkedList<String>();
-		names.add("russ");
-		names.add("Jane");
-		names.add("steve");
+		names.push("russ");
+		names.push("Jane");
+		names.push("steve");
 		
-		System.out.println(names.remove());
+		System.out.println(names.pop());
 		System.out.println(names.remove());
 		System.out.println(names.remove());
 	}
