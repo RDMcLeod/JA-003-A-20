@@ -1,24 +1,28 @@
+import java.util.LinkedList;
 
 public class javaprojhoj {
 
-	public static void main(String[] args)  {
-		int [][] data = {
-				{4,6,3,10},
-				{4,2,40,1, 5,3,2,30},
-				{5,34,1, 43}
+		static int [][] maze = {
+			{2,0,0,1},
+			{1,1,0,1},
+			{0,1,1,1}
 	};
+		//0 = wall
+		//1 = path
+		//2 = destination
+		
+		static LinkedList<Position> path = new LinkedList<Position>();
 			
-	for (int i = 0; i < data.length; i++) {
-		for (int j = 0; j < data [i].length; j++) {
-			System.out.print(data[i][j] +" ");              
-		}
-		System.out.println(); 
+		public static void main(String[] args)  {
+			Position p = new Position(3, 0);
+			path.push(p);
+			
+			maze[path.peek().y] [path.peek().x]= 0; 
 	}		
 					
 	}			
-}	
+
 			
 	
-
 
 
