@@ -3,7 +3,7 @@ import java.util.LinkedList;
 public class javaprojhoj {
 
 		static int [][] maze = {
-			{2,0,0,1},
+			{2,0,1,1},
 			{1,1,2,0},
 			{0,1,1,1}
 	};
@@ -14,7 +14,7 @@ public class javaprojhoj {
 		static LinkedList<Position> path = new LinkedList<Position>(); 
 			
 		public static void main(String[] args)  {
-			Position p = new Position(3, 0);
+			Position p = new Position(0, 3);
 			path.push(p);
 			
 			int y = path.peek().y;
@@ -24,43 +24,43 @@ public class javaprojhoj {
 			
 			while (true) {
 			//down
-			if(maze [y+1][x]==2) {
-				System.out.println("You won!");
+			if(maze[y+1][x]==2) {
+				System.out.println("Moved down. You won!");
 				return;
-			}else if (maze [y+1][x]==1) {
+			}else if(maze[y+1][x]==1) {
 				System.out.println("Moved down");
 				path.push(new Position(y+1, x));
 				continue;
 			}
 			//Left
-			if(maze [x-1][x]==2) {
-				System.out.println("You won!");
+			if(maze[y][x-1]==2) {
+				System.out.println("Moved left. You won!");
 				return;
-			}else if (maze [y][x-1]==1) {
-				System.out.println("Moved down");
+			}else if(maze[y][x-1]==1) {
+				System.out.println("Moved left");
 				path.push(new Position(y, x-1));
 				continue;
 		    }
 			//Up
-			if(maze [y-1][x]==2) {
+			if(maze[y-1][x]==2) {
 				System.out.println("You won!");
 				return;
-			}else if (maze [y-1][x]==1) {
-				System.out.println("Moved down");
+			}else if(maze [y-1][x]==1) {
+				System.out.println("Moved up. You won!");
 				path.push(new Position(y-1, x));
 				continue;
 		    }
 			//Right
-			if(maze [y][x+1]==2) {
-				System.out.println("You won!");
+			if(maze[y][x+1]==2) {
+				System.out.println("Moved right. You won!");
 				return;
-			}else if (maze [y][x+1]==1) {
-				System.out.println("Moved down");
-				path.push(new Position(y, x+1));
+			}else if(maze [y][x+1]==1) {
+				System.out.println("Moved right");
+				path.push(new Position(y,x+1));
 				continue;
             }
-			}
 		}
+	}
 }	
 	
 
