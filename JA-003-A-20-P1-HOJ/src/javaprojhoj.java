@@ -59,9 +59,13 @@ public class javaprojhoj {
 				path.push(new Position(y,x+1));
 				continue;
             }
+			path.pop();
+			if(path.size()< 0) {
+				System.out.println("No path");
+			}
 		}
 	}
-}	
+}
 	
 
 
