@@ -30,7 +30,7 @@ public class javaprojhoj {
 			}
 			// Left
 			if (maze[y][x - 1] == 2) {
-				System.out.println("Moved left.0 You won!");
+				System.out.println("Moved left. You won!");
 				return;
 			} else if (maze[y][x - 1] == 1) {
 				System.out.println("Moved left");
@@ -39,10 +39,10 @@ public class javaprojhoj {
 			}
 			// Up
 			if (maze[y - 1][x] == 2) {
-				System.out.println("You won!");
+				System.out.println("Moved up. You won!");
 				return;
 			} else if (maze[y - 1][x] == 1) {
-				System.out.println("Moved up. You won!");
+				System.out.println("Moved up");
 				path.push(new Position(y - 1, x));
 				continue;
 			}
