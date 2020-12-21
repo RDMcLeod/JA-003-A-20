@@ -3,9 +3,12 @@ import java.util.LinkedList;
 public class javaprojhoj {
 
 	static int[][] maze = { 
-			{ 2, 1, 1, 1 }, 
-			{ 0, 0, 1, 1 }, 
-			{ 0, 0, 0, 1 } 
+			{ 1,1,1,1,0,1,1,1,0,1,0 }, 
+			{ 0,0,1,1,1,1,0,0,0,1,0 }, 
+			{ 0,0,0,1,0,1,1,0,1,1,1 },
+			{ 1,1,1,2,0,1,0,1,0,1,0 }, 
+			{ 0,0,0,1,0,0,0,0,0,1,0 }, 
+			{ 0,0,0,1,1,1,1,1,1,0,1 } 
 	};
 	// 0 = wall
 	// 1 = path
@@ -14,7 +17,7 @@ public class javaprojhoj {
 	static LinkedList<Position> path = new LinkedList<Position>();
 
 	public static void main(String[] args) {
-		Position p = new Position(0, 3);
+		Position p = new Position(4, 8);
 		path.push(p);
 		
 		while(true) {
