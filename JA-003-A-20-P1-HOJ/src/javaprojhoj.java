@@ -28,8 +28,7 @@ public class javaprojhoj {
 		}
 			
 		m.start = new Position(Integer.parseInt(in.nextLine()), Integer.parseInt(in.nextLine()));
-		m.path = new LinkedList<Position>();
-		
+				
 		mazes.add(m);
 		
 		int i = 0;
