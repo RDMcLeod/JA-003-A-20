@@ -2,7 +2,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class javaprojhoj {
@@ -24,7 +23,7 @@ public class javaprojhoj {
 		
 		for(int i = 0; i < rows; i++) {
 			String line = in.nextLine();
-			m.maze [i]= Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
+			m.maze[i] = Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
 		}
 			
 		m.start = new Position(Integer.parseInt(in.nextLine()), Integer.parseInt(in.nextLine()));
