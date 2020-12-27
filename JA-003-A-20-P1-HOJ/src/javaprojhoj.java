@@ -13,22 +13,7 @@ public class javaprojhoj {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		ArrayList<Maze>mazes = new ArrayList<Maze>();
-		
-		Maze m = new Maze();
-		
-		Scanner in = new Scanner(new File("mazes.txt"));
-		int rows =  Integer.parseInt(in.nextLine());
-		m.maze = new int[rows][];
-		
-		for(int i = 0; i < rows; i++) {
-			String line = in.nextLine();
-			m.maze[i] = Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
-		}
-			
-		m.start = new Position(Integer.parseInt(in.nextLine()), Integer.parseInt(in.nextLine()));
-				
-		mazes.add(m);
+		ArrayList<Maze>mazes = readMazes();
 		
 		int i = 0;
 		while(i < mazes.size()) {
@@ -36,10 +21,39 @@ public class javaprojhoj {
 			System.out.println("You won");
 		} else {
 			System.out.println("No path");
-		}
+	    }
 		i++;
-	}		
-   }
+      }		
+ }
+			private static ArrayList<Maze> readMazes() throws FileNotFoundException {
+								
+				ArrayList<Maze> mazes = new ArrayList<Maze>();
+				
+				
+				Scanner in = new Scanner(new File("mazes.txt"));
+				while ( in.hasNext()) {
+					
+					Maze m = new Maze();
+					
+					int rows =  Integer.parseInt(in.nextLine());
+					
+					m.maze = new int[rows][];
+					
+					for(int i = 0; i < rows; i++) {
+						String line = in.nextLine();
+						m.maze[i] = Arrays.stream(line.split(", ")).mapToInt(Integer::parseInt).toArray();
+					}
+						
+					m.start = new Position(Integer.parseInt(in.nextLine()), Integer.parseInt(in.nextLine()));
+					
+					in.nextLine();
+							
+					mazes.add(m);
+				}
+				in.close();
+		
+		        return mazes;
+	}
 			private static boolean solveMaze(Maze m) {
 				
 		        Position p = m.start;
